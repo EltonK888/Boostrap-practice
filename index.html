@@ -1,195 +1,201 @@
 <!DOCTYPE html>
-
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Practice 3</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <style>
+            .carousel-item {
+                max-height: 725px;
+                height: auto;
+            }
+            .d-block {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .project-feature {
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
 
-<head>
+            a button {
+                margin-bottom: 10px;
+            }
+            
+            .icon {
+                color: dimgray;
+            }
 
-    <meta charset="UTF-8">
+            .icon:hover {
+                filter: brightness(1.5);
+                transition: 0.2s ease-in;
+            }
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>Exercise 4</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    <style>
-
-        body {
-
-            margin-top: 50px;
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-
-        <div class="container">
-
-            <a class="navbar-brand" href="#">Project 4</a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content">
-
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbar-content" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-
-                <ul class="navbar-nav mr-auto">
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="#">Home</a>
-
-                    </li>
-
-                    <li class="nav-item active">
-
-                        <a class="nav-link" href="#">About</a>
-
-                    </li>
-
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="#">Contact<span class="badge badge-secondary badge-pill ml-1">3</span></a>
-
-                    </li>
-
-                    <li class="nav-item dropdown">
-
-                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Home</a>
-
-                        <div class="dropdown-menu">
-
-                            <a class="dropdown-item">Action</a>
-
-                            <a class="dropdown-item">Another action</a>
-
-                            <a class="dropdown-item">Something else here</a>
-
-                            <div class="dropdown-divider"></div>
-
-                            <div class="dropdown-header">Nav header</div>
-
-                            <a class="dropdown-item">Separated link</a>
-
-                            <a class="dropdown-item">One more separated link</a>
-
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <form>
-
-                    <div class="form-group form-inline my-2 my-lg-0">
-
-                        <input type="text" class="form-control mr-sm-2 ml-2" placeholder="Email">
-
-                        <input type="text" class="form-control mr-sm-2 ml-2" placeholder="Password">
-
-                        <button type="button" class="btn btn-success mr-sm-2 ml-2">Sign in</button>
-
+            html {
+                scroll-behavior: smooth;
+            }
+        </style>
+    </head>
+    <body>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <p class="navbar-brand my-auto">Elton</p>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbar-content">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#aboutMe">About Me</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="navbar-item">
+                            <a class="nav-link" href="#contactMe">Contact Me</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end navbar-->
+        <!--carousel-->
+        <div id="carousel-slides" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-slides" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-slides" data-slide-to="1"></li>
+                <li data-target="#carousel-slides" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="irxx26rzlrr11.jpg" class="img-fluid d-block" alt="img1">
+                    <div class="carousel-caption">
+                        <h1 class="featurette-heading">My name is Elton</h1>
                     </div>
-
-                </form>
-
+                </div>
+                <div class="carousel-item">
+                    <img src="uqe586kh9ez11.jpg" class="d-block" alt="img2">
+                    <div class="carousel-caption">
+                        <h1>Welcome to my site</h1>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="wallhaven-728736.jpg" class="d-block" alt="img3">
+                    <div class="carousel-caption">
+                        <h1>Have a look around!</h1>
+                    </div>
+                </div>
             </div>
-
+            <a class="carousel-control-prev" href="#carousel-slides" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#carousel-slides" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
-
-    </nav>
-
-    <div class="jumbotron jumbotron-fluid">
-
-        <div class="container">
-
-            <h1 class="display-3">Hello, world!</h1>
-
-            <p class="lead">This is exercise 4. It includes a large callout called a jumbotron and three supporting pieces of content</p>
-
-            <button class="btn btn-primary btn-lg" type="submit">Learn more<i class="fas fa-angle-double-right ml-1"></i></button>
-
-        </div>
-
-    </div>
-
-    <div class="container">
-
-        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-
-            <strong>Warning!</strong> your subscription is going to expire in 3 days.
-
-            <button class="close" data-dismiss="alert">
-
-                <span>&times;</span>
-
-            </button>
-
-        </div>
-
-        <div class="row">
-
-            <div class="col-md-4">
-
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque incidunt odit sunt accusamus quaerat fugit numquam explicabo soluta laborum, earum quam nihil iusto facere laudantium voluptatum veritatis quidem est officia.</p>
-
-                <button class="btn btn-outline-secondary"><i class="fas fa-chart-bar mr-1"></i>View details</button>
-
+        <!--end carousel-->
+        <div class="container text-center">
+            <!--about me-->
+            <a id="aboutMe"><hr></a>
+            <br>
+            <br>
+            <div id="about-me">
+                <h1 class="display-3">About Me</h1>
+                <p class="lead"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde deleniti libero doloribus quidem quas quaerat qui dolore autem? Doloribus, nulla ipsam! Officia dolorum minus ipsam veniam vitae vero, consequatur dicta!</p>
             </div>
-
-            <div class="col-md-4">
-
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque incidunt odit sunt accusamus quaerat fugit numquam explicabo soluta laborum, earum quam nihil iusto facere laudantium voluptatum veritatis quidem est officia.</p>
-
-                <button class="btn btn-outline-secondary"><i class="fas fa-mobile-alt mr-1"></i>View details</button>
-
+            <br>
+            <br>
+            <!--end about me-->
+            <!--project cards-->
+            <a id="projects"><hr></a>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="wallhaven-728736.jpg" height="200px" width="200px">
+                    <h2>Project 1</h2>
+                    <span class="badge badge-primary mr-2">Python</span><span class="badge badge-warning mr-2">HTML5</span><span class="badge badge-danger">CSS</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas accusamus p laceat reprehenderit? Ut impedit tenetur quas, praesentium pariatur voluptatum, autem eaque iste quam quisquam amet voluptas debitis error voluptatibus.</p>
+                    <a href="#project1"><button type="button" class="btn btn-secondary btn-md" href="#project1">Learn more <i class="fas fa-angle-double-right"></i></button></a>
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="uqe586kh9ez11.jpg" height="200px" width="200px">
+                    <h2>Project 2</h2>
+                    <span class="badge badge-success mr-2">C (language)</span><span class="badge badge-info">Bash</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas accusamus placeat reprehenderit? Ut impedit tenetur quas, praesentium pariatur voluptatum, autem eaque iste quam quisquam amet voluptas debitis error voluptatibus.</p>
+                    <a href="#project2"><button type="button" class="btn btn-secondary btn-md">Learn more <i class="fas fa-angle-double-right"></i></button></a>
+                </div>
+                <div class="col-md-4">
+                    <img class="rounded-circle" src="irxx26rzlrr11.jpg" height="200px" width="200px">
+                    <h2>Project 3</h2>
+                    <span class="badge badge-primary mr-2">Python</span><span class="badge badge-success">JavaScript</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas accusamus placeat reprehenderit? Ut impedit tenetur quas, praesentium pariatur voluptatum, autem eaque iste quam quisquam amet voluptas debitis error voluptatibus.</p>
+                    <a href="#project3"><button type="button" class="btn btn-secondary btn-md">Learn more <i class="fas fa-angle-double-right"></i></button></a>
+                </div>
             </div>
-
-            <div class="col-md-4">
-
-                <h2>Heading<span class="badge badge-info ml-1">New</span></h2>
-
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque incidunt odit sunt accusamus quaerat fugit numquam explicabo soluta laborum, earum quam nihil iusto facere laudantium voluptatum veritatis quidem est officia.</p>
-
-                <button class="btn btn-outline-secondary"><i class="fas fa-map-marker-alt mr-1"></i>View details</button>
-
+            <!--end project cards-->
+            <!--featuring individual projects-->
+            <a id="project1"><hr></a>
+            <div class="project-feature">
+                <div class="row">
+                    <div class="col-md-8 align-self-center">
+                        <h3 class="display-3">Project 1. It's really great.</h3>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse ullam dicta consequatur? Maxime, doloremque. Recusandae sed eum voluptatem rerum laudantium labore nam facilis. Nesciunt dignissimos similique adipisci omnis molestias.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="wallhaven-728736.jpg" alt="project 1" height="500px" width="420px">
+                    </div>
+                </div>
             </div>
-
+            <a id="project2"><hr></a>
+            <div class="project-feature">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="uqe586kh9ez11.jpg" alt="project 2" height="500px" width="350px">
+                    </div>
+                    <div class="col-md-8 align-self-center">
+                        <h3 class="display-3">Project 2. Oh yeah. It's that good. See for yourself.</h3>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse ullam dicta consequatur? Maxime, doloremque. Recusandae sed eum voluptatem rerum laudantium labore nam facilis. Nesciunt dignissimos similique adipisci omnis molestias.</p>
+                    </div>
+                </div>
+            </div>
+            <a id="project3"><hr></a>
+            <div class="project-feature">
+                <div class="row">
+                    <div class="col-md-8 align-self-center">
+                        <h3 class="display-3">Project 3. Check this one out.</h3>
+                        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam esse ullam dicta consequatur? Maxime, doloremque. Recusandae sed eum voluptatem rerum laudantium labore nam facilis. Nesciunt dignissimos similique adipisci omnis molestias.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="irxx26rzlrr11.jpg" alt="project 3" height="500px" width="420px">
+                    </div>
+                </div>
+            </div>
+            <hr>
         </div>
+        <!--end of features-->
+        <!--footer-->
+        <footer>
+            <div class="container" id="contactMe">
+                <div class="row justfiy-content-between">
+                    <div class="col-auto mr-auto">
+                        <span class="lead">Contact Me</span>
+                        <a href="http://www.github.com/EltonK888/" target="blank"><span><i class="fab fa-github fa-2x mx-1 icon"></i></span></a>
+                        <a href="http://www.linkedin.com/in/eltonkok" target="blank"><span><i class="fab fa-linkedin fa-2x mx-1 icon"></i></span></a>
+                        <a href="mailto:elton.kok@mail.utoronto.ca"><span><i class="fa fa-envelope fa-2x mx-1 icon"></i></span></a>
+                    </div> 
+                    <div class="col-md-auto">
+                        <p class="lead"> Created by Elton Kok </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
-        <hr>
-
-        <p>&copy; Company 2019</p>
-
-    </div>
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-</body>
-
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
 </html>
